@@ -29,6 +29,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>TFGS Interface - Home</title>
+</svelte:head>
+
 <script>
 	export let trending_games;
 	export let updated_games;

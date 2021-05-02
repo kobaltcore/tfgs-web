@@ -41,6 +41,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>TFGS Interface - {game.title}</title>
+</svelte:head>
+
 <script>
 	export let game;
 	export let reviews;

@@ -43,6 +43,10 @@
     }
 </script>
 
+<svelte:head>
+	<title>TFGS Interface - Search</title>
+</svelte:head>
+
 <script>
     import { goto } from "$app/navigation";
 
