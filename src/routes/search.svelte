@@ -65,7 +65,7 @@
 
 {#if results["suggestion"] != null}
     <p class="drac-text drac-line-height drac-text-white">
-        Did you mean <a href={`search?query=${results["suggestion"]}`}
+        Did you mean <a class="custom_link" href={`search?query=${results["suggestion"]}`}
             >{results["suggestion"]}</a
         >?
     </p>
@@ -78,7 +78,7 @@
             <a
                 sveltekit:prefetch
                 href={`search?query=${query}&offset=${results["previous"]["offset"]}&limit=${results["previous"]["limit"]}`}
-                class="drac-text">Previous</a
+                class="custom_link">Previous</a
             >
         {:else}
             <span class="drac-text drac-line-height drac-text-white"
@@ -94,7 +94,7 @@
             <a
                 sveltekit:prefetch
                 href={`search?query=${query}&offset=${results["next"]["offset"]}&limit=${results["next"]["limit"]}`}
-                class="drac-text ">Next</a
+                class="custom_link">Next</a
             >
         {:else}
             <span class="drac-text drac-line-height drac-text-white">Next</span>
@@ -110,7 +110,7 @@
                     <a
                         sveltekit:prefetch
                         href="game/{game.id}"
-                        class="drac-text">{game.title}</a
+                        class="custom_link">{game.title}</a
                     >
                 </li>
             {/each}
