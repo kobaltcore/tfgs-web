@@ -36,8 +36,6 @@
 	export let updated_games;
 	export let new_games;
 
-	console.log(moment);
-
 	function to_timedelta(date_str) {
 		return moment(date_str).fromNow();
 	}
