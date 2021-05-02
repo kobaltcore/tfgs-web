@@ -29,15 +29,23 @@
 	}
 </script>
 
-<svelte:head>
-	<title>TFGS Interface - Home</title>
-</svelte:head>
-
 <script>
+	import moment from "moment";
+
 	export let trending_games;
 	export let updated_games;
 	export let new_games;
+
+	console.log(moment);
+
+	function to_timedelta(date_str) {
+		return moment(date_str).fromNow();
+	}
 </script>
+
+<svelte:head>
+	<title>TFGS Interface - Home</title>
+</svelte:head>
 
 <div
 	variant="subtle"
@@ -48,8 +56,13 @@
 	<ul class="drac-list drac-list-unordered drac-list-purple">
 		{#each trending_games as game}
 			<li>
-				<a sveltekit:prefetch href="game/{game.id}" class="custom_link"
-					>{game.title}</a
+				<span class="drac-text drac-line-height drac-text-white">
+					<a
+						sveltekit:prefetch
+						href="game/{game.id}"
+						class="custom_link">{game.title}</a
+					>
+					for {game.game_engine} by {Object.keys(game.authors)}</span
 				>
 			</li>
 		{/each}
@@ -64,8 +77,14 @@
 	<ul class="drac-list drac-list-unordered drac-list-purple">
 		{#each updated_games as game}
 			<li>
-				<a sveltekit:prefetch href="game/{game.id}" class="custom_link"
-					>{game.title}</a
+				<span class="drac-text drac-line-height drac-text-white">
+					<a
+						sveltekit:prefetch
+						href="game/{game.id}"
+						class="custom_link">{game.title}</a
+					>
+					for {game.game_engine} by {Object.keys(game.authors)}
+					{to_timedelta(game.last_update)}</span
 				>
 			</li>
 		{/each}
@@ -80,8 +99,13 @@
 	<ul class="drac-list drac-list-unordered drac-list-purple">
 		{#each new_games as game}
 			<li>
-				<a sveltekit:prefetch href="game/{game.id}" class="custom_link"
-					>{game.title}</a
+				<span class="drac-text drac-line-height drac-text-white">
+					<a
+						sveltekit:prefetch
+						href="game/{game.id}"
+						class="custom_link">{game.title}</a
+					>
+					for {game.game_engine} by {Object.keys(game.authors)} {to_timedelta(game.release_date)}</span
 				>
 			</li>
 		{/each}

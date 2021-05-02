@@ -15,6 +15,7 @@
     },
     "type": "module",
     "dependencies": {
-        "@dracula/dracula-ui": "^0.7.6"
+        "@dracula/dracula-ui": "^0.7.6",
+        "moment": "^2.29.1"
     }
 }
