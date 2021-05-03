@@ -154,8 +154,7 @@
 				{#if game.synopsis["text"]}
 					<li
 						class="drac-tab"
-						class:drac-tab-active={$page.query.get("tab") ==
-							"synopsis"}
+						class:drac-tab-active={tab == "synopsis"}
 					>
 						<a
 							sveltekit:noscroll
@@ -166,10 +165,7 @@
 					</li>
 				{/if}
 				{#if game.plot["text"]}
-					<li
-						class="drac-tab"
-						class:drac-tab-active={$page.query.get("tab") == "plot"}
-					>
+					<li class="drac-tab" class:drac-tab-active={tab == "plot"}>
 						<a
 							sveltekit:noscroll
 							class="drac-tab-link drac-text"
@@ -181,8 +177,7 @@
 				{#if game.characters["text"]}
 					<li
 						class="drac-tab"
-						class:drac-tab-active={$page.query.get("tab") ==
-							"characters"}
+						class:drac-tab-active={tab == "characters"}
 					>
 						<a
 							sveltekit:noscroll
@@ -195,8 +190,7 @@
 				{#if game.walkthrough["text"]}
 					<li
 						class="drac-tab"
-						class:drac-tab-active={$page.query.get("tab") ==
-							"walkthrough"}
+						class:drac-tab-active={tab == "walkthrough"}
 					>
 						<a
 							sveltekit:noscroll
@@ -209,8 +203,7 @@
 				{#if game.changelog["text"]}
 					<li
 						class="drac-tab"
-						class:drac-tab-active={$page.query.get("tab") ==
-							"changelog"}
+						class:drac-tab-active={tab == "changelog"}
 					>
 						<a
 							sveltekit:noscroll
