@@ -51,7 +51,6 @@
 <script>
 	import { page } from "$app/stores";
 
-	console.log($page);
 	export let limit;
 	export let offset;
 	export let tab;
