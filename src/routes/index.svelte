@@ -49,7 +49,7 @@
 	variant="subtle"
 	class="drac-box drac-card drac-card-subtle drac-border-pink drac-bg-pink drac-p-md drac-m-md"
 >
-	<h2 class="drac-heading drac-heading-xl drac-text-white">Trending</h2>
+	<h2 class="drac-heading drac-heading-xl drac-text-white">trending</h2>
 
 	<ul class="drac-list drac-list-unordered drac-list-purple">
 		{#each trending_games as game}
@@ -71,7 +71,7 @@
 	variant="subtle"
 	class="drac-box drac-card drac-card-subtle drac-border-pink drac-bg-pink drac-p-md drac-m-md"
 >
-	<h2 class="drac-heading drac-heading-xl drac-text-white">Updated</h2>
+	<h2 class="drac-heading drac-heading-xl drac-text-white">updated</h2>
 	<ul class="drac-list drac-list-unordered drac-list-purple">
 		{#each updated_games as game}
 			<li>
@@ -93,7 +93,7 @@
 	variant="subtle"
 	class="drac-box drac-card drac-card-subtle drac-border-pink drac-bg-pink drac-p-md drac-m-md"
 >
-	<h2 class="drac-heading drac-heading-xl drac-text-white">New</h2>
+	<h2 class="drac-heading drac-heading-xl drac-text-white">new</h2>
 	<ul class="drac-list drac-list-unordered drac-list-purple">
 		{#each new_games as game}
 			<li>
